@@ -251,9 +251,10 @@ if ( ! function_exists('message')) {
      */
     function message($content, $redirect = 'back', $type = 'success', $timeout = 2)
     {
+       
         if (IS_AJAX) {
             $data = ['valid' => $type == 'success' ? 1 : 0, 'message' => $content];
-
+            
             return json_encode($data, JSON_UNESCAPED_UNICODE);
         } else {
             switch ($redirect) {
@@ -268,9 +269,12 @@ if ( ! function_exists('message')) {
                     $url = "location.replace('".__URL__."')";
                     break;
                 default:
+                   
                     if (empty($redirect)) {
+                       
                         $url = 'window.history.go(-1)';
                     } else {
+                       
                         $url = "location.replace('".u($redirect)."')";
                     }
                     break;
@@ -279,6 +283,7 @@ if ( ! function_exists('message')) {
             switch ($type) {
                 case 'success':
                     $ico = 'fa-check-circle';
+                    
                     break;
                 case 'error':
                     $ico = 'fa-times-circle';

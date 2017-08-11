@@ -18,4 +18,15 @@ class Entry extends Controller
     {
         return View::with('framework', 'HDPHP')->make();
     }
+    
+    public function add(){
+        echo "entry add";
+    }
 }
+
+
+
+
+
+
+
