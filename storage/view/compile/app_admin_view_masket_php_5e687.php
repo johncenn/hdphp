@@ -25,10 +25,19 @@
 } 
 
 </style>
+<!--blade_title-->
  <div>
     <header class="header">标题</header>
     <div class="left">左边</div>
     <div class="right">
         <!--blade_content-->
     </div>
+    
 </div> 
+
+<!-- 父类定义的组件在子模板里可以使用 -->
+
+
+
+
+

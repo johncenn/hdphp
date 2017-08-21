@@ -29,7 +29,10 @@ class Csrf implements Middleware
      */
     protected function validate()
     {
+        
         $status = $this->getToken() && \Request::post() && \Config::get('csrf.open');
+        //dd(Config::get('csrf.open'));
+        
         if ($status) {
             //比较CSRF
             if ($this->getClientToken() == $this->getToken()) {

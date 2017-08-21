@@ -35,19 +35,37 @@ trait Connection
      */
     public function link($type = true)
     {
+       
         static $links = [];
         $engine = ($type ? 'write' : 'read');
         $mulConfig    = Config::get('database.'.$engine);
+         
         $this->config = $mulConfig[array_rand($mulConfig)];
         $cacheName = serialize($this->config);
+        
+       // echo $this->getDns();
+        //echo "aa";
+        
+        
+        $this->config['user'] = rtrim($this->config['user'],"\r");
+        $this->config['password'] = rtrim($this->config['password'],"\r");
+        //die;
+        
         if ( ! isset($links[$cacheName])) {
+            
+           
+            
             $links[$cacheName] = new PDO(
                 $this->getDns(), $this->config['user'], $this->config['password'],
                 [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'"]
             );
+            
+            
+            
             $links[$cacheName]->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
-
+        
+        
         return $links[$cacheName];
     }
 
