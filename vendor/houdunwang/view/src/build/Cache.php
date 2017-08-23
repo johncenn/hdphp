@@ -67,8 +67,9 @@ trait Cache
      */
     public function isCache()
     {
+        
         $dir = Config::get('view.cache_dir');
-
+        
         return \houdunwang\cache\Cache::driver('file')->dir($dir)->get($this->cacheName());
     }
 

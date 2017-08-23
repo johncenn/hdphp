@@ -56,6 +56,16 @@
 <hr/>
 <a href="<?php echo u('views/tag')?>">系统标签</a>
 
+<hr/>
+<a href="<?php echo u('views/cache')?>">模板缓存</a>
+
+<hr/>
+<a href="<?php echo u('views/csrf2')?>">csrf</a>
+
+<hr/>
+<a href="<?php echo u('admin/Entry/index')?>">中间件</a>
+
+
 
 
 

@@ -36,8 +36,11 @@ class Base
      */
     public function make($file = '', $vars = [])
     {
+        
         $this->setFile($file);
+        
         $this->with($vars);
+       // die;
         Middleware::web('view_parse_file');
 
         return $this;

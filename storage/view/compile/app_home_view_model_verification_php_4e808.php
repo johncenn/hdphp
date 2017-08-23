@@ -17,7 +17,7 @@
 
                <?php }?>
 
-<form action="<?php echo u(auto)?>" method="post">
+<form action="" method="post">
 <input type='hidden' name='csrf_token' value=''/>
 
 <!-- 用户名：<input type="text" name="username" /><p/>

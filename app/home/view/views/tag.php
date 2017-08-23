@@ -27,7 +27,7 @@
 {{$hd['list']['n']['index']}} 	当前循环是第几条 <p> -->
 
 
-<if value="$data">
+<!-- <if value="$data">
 	有数据
 </if>
 
@@ -37,6 +37,15 @@
 	二条
 <else/>
 	{{count($data)}}条
+</if> -->
+
+
+<include file="app/home/view/views/header.php"/>
+<css file="__ROOT__/app/home/public/css/common.css"/>
+<if value="1 eq 1">
+   <?php  
+    echo "1=1";
+   ?>
 </if>
 
 

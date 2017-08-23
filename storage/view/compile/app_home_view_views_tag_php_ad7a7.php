@@ -65,7 +65,7 @@
 <?php echo $hd['list']['n']['index']?> 	当前循环是第几条 <p> -->
 
 
-<?php if($data){?>
+<!-- <?php if($data){?>
                 
 	有数据
 
@@ -78,6 +78,17 @@
 	二条
 <?php }else{?>
 	<?php echo count($data)?>条
+
+               <?php }?> -->
+
+
+header.php
+<link type="text/css" rel="stylesheet" href="http://localhost/web/phpbase/hdphp/app/home/public/css/common.css"/>
+<?php if(1==1){?>
+                
+   <?php  
+    echo "1=1";
+   ?>
 
                <?php }?>
 
